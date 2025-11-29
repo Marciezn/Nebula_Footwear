@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Admin</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+  <div class="logo-container">
+    <img src="img/logo.png" alt="Logo">
+    <h2>Admin Panel</h2>
+  </div>
+  <ul>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="pengguna.html">Pengguna</a></li>
+    <li><a href="pesanan.html">Pesanan</a></li>
+    <li><a href="katalog.html">Katalog</a></li>
+    <li><a href="laporan.html">Laporan</a></li>
+  </ul>
+</div>
+
+  <div class="main-content">
+    <header>
+      <h1>Dashboard</h1>
+    </header>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Jumlah Pembelian Sepatu</h3>
+        <p>125</p>
+      </div>
+      <div class="card">
+        <h3>Jumlah Pengguna</h3>
+        <p>80</p>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <h3>Grafik Pemesanan Tiap Bulan</h3>
+      <canvas id="chartPemesanan"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #111827;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #1f2937;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+}
+
+.sidebar h2 {
+  margin-bottom: 0px;
+  color: #00bcd4;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sidebar ul li.active a,
+.sidebar ul li a:hover {
+  background-color: #00bcd4;
+  color: #111827;
+}
+
+.main-content {
+  margin-left: 240px;
+  padding: 30px;
+  width: calc(100% - 240px);
+}
+
+header h1 {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+.chart-container {
+  margin-top: 30px;
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1f2937;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: left;
+}
+
+.edit, .delete {
+  background: #00bcd4;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  color: #111827;
+  cursor: pointer;
+}
+
+.delete {
+  background: #e91e63;
+  color: white;
+}
+
+.form-katalog {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 400px;
+}
+
+.form-katalog input, .form-katalog textarea, .form-katalog button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+.form-katalog button {
+  background-color: #00bcd4;
+  color: #111827;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --- LOGO & ADMIN PANEL --- */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.logo-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.logo-container h2 {
+  color: #00bcd4;
+  font-size: 20px;
+  font-weight: 600;
+  white-space: nowrap; /* Biar tidak turun ke bawah */
+}
+
+/* --- CARD STYLING (JUMLAH / STATISTIK) --- */
+.card h3 {
+  color: #00bcd4;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Hanya untuk angka di card statistik (Dashboard & Laporan) */
+.cards .card p.stats-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Gaya umum card checkout tetap biasa */
+.cards .card p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ccc;
+  margin: 3px 0;
+}
+
