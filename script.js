@@ -1,40 +1,28 @@
-// Dashboard Chart
-if (document.getElementById("chartPemesanan")) {
-  const ctx = document.getElementById("chartPemesanan");
-  new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
-      datasets: [{
-        label: "Jumlah Pemesanan",
-        data: [10, 20, 15, 25, 30, 45, 40, 35, 20, 25, 15, 10],
-        backgroundColor: "#00bcd4"
-      }]
-    },
-    options: { responsive: true }
-  });
-}
+// Chart.js setup
+const ctx2 = document.getElementById("salesChart").getContext("2d");
 
-// Laporan Chart
-if (document.getElementById("chartPenjualan")) {
-  const ctx2 = document.getElementById("chartPenjualan");
-  new Chart(ctx2, {
-    type: "bar",
+new Chart(ctx2, {
+    type: "line",
     data: {
-      labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul"],
-      datasets: [{
-        label: "Penjualan",
-        data: [5, 10, 8, 12, 15, 18, 20],
-        backgroundColor: "#00bcd4"
-      }]
+        labels:["22 Jul","23 Jul","24 Jul","25 Jul","26 Jul","27 Jul","28 Jul","29 Jul"],
+        datasets: [{
+            label:"Sales",
+            data:[5000,12000,9000,20000,15000,30000,25000,40000],
+            borderColor:"#00c4a5",
+            backgroundColor:"rgba(0,196,165,0.15)",
+            fill:true,
+            tension:0.4,
+            borderWidth:3
+        }]
     },
-    options: { responsive: true }
-  });
-}
-
-// Contoh fungsi CRUD Pengguna
-document.querySelectorAll(".delete").forEach(btn => {
-  btn.addEventListener("click", () => {
-    btn.closest("tr").remove();
-  });
+    options:{
+        plugins:{
+            legend:{ display:true }
+        },
+        scales:{
+            y:{ grid:{ color:"#eee" }},
+            x:{ grid:{ display:false }}
+        },
+        responsive:true
+    }
 });

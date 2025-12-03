@@ -1,49 +1,124 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard - Admin</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | Nebula</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="sidebar">
-  <div class="logo-container">
-    <img src="img/logo.png" alt="Logo">
-    <h2>Admin Panel</h2>
-  </div>
-  <ul>
-    <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="pengguna.html">Pengguna</a></li>
-    <li><a href="pesanan.html">Pesanan</a></li>
-    <li><a href="katalog.html">Katalog</a></li>
-    <li><a href="laporan.html">Laporan</a></li>
-  </ul>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="logo13.png" class="logo">
+            <h2>Nebula<span>Admin</span></h2>
+        </div>
+
+        <nav class="menu">
+            <a class="active"><i class="fas fa-home"></i> Dashboard</a>
+            <a><i class="fas fa-box"></i> Produk</a>
+            <a><i class="fas fa-tags"></i> Promo</a>
+            <a><i class="fas fa-shopping-cart"></i> Orders</a>
+            <a><i class="fas fa-users"></i> Customers</a>
+            <a><i class="fas fa-cog"></i> Pengaturan</a>
+        </nav>
+
+        <div class="logout-box">
+            <button id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="content">
+
+        <div class="topbar">
+            <input type="text" placeholder="Search dashboard...">
+            <div class="profile">
+                <i class="far fa-bell"></i>
+                <img src="foto1.jpg" class="avatar">
+            </div>
+        </div>
+
+        <!-- 4 CARDS -->
+        <div class="stats-row">
+
+            <div class="stat-card">
+                <h4>Total Revenue</h4>
+                <p class="big">$82,650</p>
+                <span class="positive">+11%</span>
+            </div>
+
+            <div class="stat-card">
+                <h4>Total Order</h4>
+                <p class="big">1,645</p>
+                <span class="positive">+11%</span>
+            </div>
+
+            <div class="stat-card">
+                <h4>Customers</h4>
+                <p class="big">983</p>
+                <span class="positive">+8%</span>
+            </div>
+
+            <div class="stat-card">
+                <h4>Visitor</h4>
+                <p class="big">5,492</p>
+                <span class="positive">+19%</span>
+            </div>
+
+        </div>
+
+        <!-- Chart -->
+        <div class="sales-container">
+
+    <div class="sales-header">
+        <h3>Sales Analytic</h3>
+
+        <div class="filter-box">
+            <label>Sort by</label>
+            <select id="selectMonth">
+                <option>Jul 2023</option>
+                <option>Aug 2023</option>
+                <option>Sep 2023</option>
+                <option>Oct 2023</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- BADGE ROW -->
+    <div class="sales-info">
+        <div class="info-box">
+            <p>Income</p>
+            <h4>$23,262.00</h4>
+            <span class="trend blue">+0.05%</span>
+        </div>
+        <div class="info-box">
+            <p>Expenses</p>
+            <h4>$11,135.00</h4>
+            <span class="trend orange">+0.03%</span>
+        </div>
+        <div class="info-box">
+            <p>Balance</p>
+            <h4>$48,135.00</h4>
+            <span class="trend green">+0.08%</span>
+        </div>
+    </div>
+
+    <!-- CHART -->
+    <canvas id="salesChart" height="90"></canvas>
+
 </div>
 
-  <div class="main-content">
-    <header>
-      <h1>Dashboard</h1>
-    </header>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Jumlah Pembelian Sepatu</h3>
-        <p>125</p>
-      </div>
-      <div class="card">
-        <h3>Jumlah Pengguna</h3>
-        <p>80</p>
-      </div>
-    </div>
+    </main>
+</div>
 
-    <div class="chart-container">
-      <h3>Grafik Pemesanan Tiap Bulan</h3>
-      <canvas id="chartPemesanan"></canvas>
-    </div>
-  </div>
 
-  <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>

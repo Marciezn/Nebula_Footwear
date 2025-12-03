@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="left">
+        <form onsubmit="showAlert('Account Created Successfully!'); return false;">
+            <h2>Create Account</h2>
+            <p>Sign up to get started with your dashboard</p>
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="John Doe" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="example@email.com" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="********" required>
+            </div>
+
+            <button type="submit">Sign Up</button>
+
+            <div class="text-link">
+                Already have an account? <a href="login.html">Login</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="right">
+        <img src="gambar1.png" alt="Illustration">
+    </div>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

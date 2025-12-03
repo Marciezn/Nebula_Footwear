@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="left">
+        <form onsubmit="showAlert('Login Success!'); return false;">
+            <h2>Login</h2>
+            <p>Welcome back! Please login to your account</p>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="example@email.com" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="********" required>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox">
+                <span>Keep me logged in</span>
+            </div>
+
+            <button type="submit">Login</button>
+
+            <div class="text-link">
+                Don't have an account? <a href="register.html">Sign up</a><br>
+                <a href="#">Forgot password?</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="right">
+        <img src="gambar1.png" alt="Illustration">
+    </div>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
