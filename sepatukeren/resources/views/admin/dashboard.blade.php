@@ -1,46 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Admin Dashboard | Nebula</title>
-    <link rel="stylesheet" href="dashboard.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-
-<div class="admin-layout">
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <img src="logo13.png" class="logo">
-            <h2>Nebula<span>Admin</span></h2>
-        </div>
-
-        <nav class="menu">
-            <a class="active"><i class="fas fa-home"></i> Dashboard</a>
-            <a><i class="fas fa-box"></i> Produk</a>
-            <a><i class="fas fa-tags"></i> Promo</a>
-            <a><i class="fas fa-shopping-cart"></i> Orders</a>
-            <a><i class="fas fa-users"></i> Customers</a>
-            <a><i class="fas fa-cog"></i> Pengaturan</a>
-        </nav>
-
-        <div class="logout-box">
-            <button id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
-        </div>
-    </aside>
+<x-layoutAdmin>
 
     <!-- MAIN -->
     <main class="content">
-
-        <div class="topbar">
-            <input type="text" placeholder="Search dashboard...">
-            <div class="profile">
-                <i class="far fa-bell"></i>
-                <img src="foto1.jpg" class="avatar">
-            </div>
-        </div>
 
         <!-- 4 CARDS -->
         <div class="stats-row">
@@ -114,11 +75,5 @@
 
 
     </main>
-</div>
 
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="dashboard.js"></script>
-
-</body>
-</html>
+</x-layoutAdmin>

@@ -8,7 +8,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #f1e8ff, #d9ccff);
+    background:#002d43;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -103,4 +103,27 @@ button:hover {
 
 .right img {
     width: 100%;
+}
+
+.error-text {
+    color: #ff4d4d;
+    font-size: 13px;
+    margin-top: 4px;
+    display: block;
+}
+
+.error-input {
+    border: 1px solid #ff4d4d !important;
+    background: #ffecec;
+}
+
+.error-alert {
+    background: #ffe2e2;
+    color: #d60000;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    border-left: 4px solid red;
 }
