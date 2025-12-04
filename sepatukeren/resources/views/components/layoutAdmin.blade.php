@@ -13,7 +13,10 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Your CSS -->
-  <link rel="stylesheet" href="{{ asset('websepatu/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('websepatu/dashboard.css') }}" />
+    <link rel="stylesheet" href="{{ asset('websepatu/adminproduk.css') }}" />
+    <link rel="stylesheet" href="{{ asset('websepatu/adminkategori.css') }}" />
+
 </head>
 <body>
 
@@ -50,5 +53,6 @@
     </div>
 
 <script src="{{ asset('websepatu/dashboard.js') }}"></script>
+<script src="{{ asset('websepatu/adminkategori.js') }}"></script>
 </body>
 </html>

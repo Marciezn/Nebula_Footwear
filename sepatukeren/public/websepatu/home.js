@@ -65,3 +65,19 @@ document.querySelectorAll('.btn-readmore').forEach(btn => {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const dropdown = document.getElementById("kategoriDropdown");
+    const toggle = dropdown.querySelector(".dropdown-toggle");
+
+    toggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle("open");
+    });
+
+    // Close if click outside
+    document.addEventListener("click", () => {
+        dropdown.classList.remove("open");
+    });
+});
+

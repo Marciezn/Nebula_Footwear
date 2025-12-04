@@ -1,0 +1,340 @@
+/* WRAPPER */
+.page-wrapper {
+    margin-top: 35px;
+}
+
+/* CARD */
+.card-form {
+    background: #fff;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.05);
+}
+
+/* TITLE */
+.form-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #102a43;
+}
+
+/* SEARCH BAR */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.search-bar input {
+    padding: 12px 14px;
+    width: 280px;
+    border: 1px solid #d8e2ef;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: .25s;
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,.2);
+    outline: none;
+}
+
+/* BUTTONS */
+.btn-add {
+    background: #007bff;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.btn-add:hover {
+    background: #005ec4;
+}
+
+.btn-edit {
+    background: #ffe169;
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn-edit:hover {
+    background: #ffd43b;
+}
+
+.btn-delete {
+    background: #ff6b6b;
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn-delete:hover {
+    background: #e63946;
+}
+
+/* STATUS BADGE */
+.badge {
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.badge.aktif {
+    background: #d9ffe7;
+    color: #1b8f51;
+}
+
+.badge.nonaktif {
+    background: #ffdada;
+    color: #c0392b;
+}
+
+/* TABLE */
+.customers-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; 
+    margin-top: 10px;
+}
+
+.customers-table thead th {
+    padding: 14px;
+    background: #f7f9fb;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: #5c6b79;
+    font-size: 13px;
+    border-bottom: 1px solid #e3e8ef;
+}
+
+.customers-table tbody tr {
+    background: #ffffff;
+    transition: .25s;
+}
+
+.customers-table tbody tr:hover {
+    background: #eef7ff;
+}
+
+.customers-table td {
+    padding: 18px 14px;
+    border-top: 1px solid #eef2f7;
+    font-size: 15px;
+}
+
+/* IMAGE ICON */
+.customers-table img {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* PAGINATION */
+.pagination {
+    margin-top: 28px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.pagination a,
+.pagination span {
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #dfe3ea;
+    background: #fff;
+    color: #333;
+    transition: .25s;
+}
+
+.pagination a:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+.pagination .active {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* ACTION BUTTON SPACING */
+.customers-table td:last-child {
+    display: flex;
+    gap: 12px;  /* <--- jarak antar tombol */
+    align-items: center;
+}
+
+/* Biar tombol tidak mepet kanan */
+.customers-table td {
+    vertical-align: middle;
+}
+
+/* Tombol Edit */
+.btn-edit {
+    background: #ffe169;
+    padding: 8px 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: .25s;
+    color: #222;
+    text-decoration: none;
+}
+
+.btn-edit:hover {
+    background: #ffd43b;
+}
+
+/* Tombol Hapus */
+.btn-delete {
+    background: #ff6b6b;
+    padding: 8px 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: .25s;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background: #e63946;
+}
+
+/* FORM CONTAINER */
+.card-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.05);
+    max-width: 850px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+/* FORM TITLE */
+.form-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #1b2735;
+}
+
+/* GRID INPUTS */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+/* FULL-WIDTH TEXTAREA */
+.form-grid textarea {
+    height: 90px;
+    padding: 12px;
+}
+
+/* INPUT / SELECT */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e2e6ee;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: .25s;
+    background: #fafbff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
+    background: #ffffff;
+}
+
+/* LABELS */
+.form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #3b4b63;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* BUTTON GROUP */
+.form-actions {
+    margin-top: 28px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* BUTTONS */
+.btn-save {
+    background: #007bff;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    transition: .25s;
+}
+
+.btn-save:hover {
+    background: #005ec4;
+}
+
+.btn-cancel {
+    background: #e8edf5;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    color: #3b4b63;
+    transition: .25s;
+    text-decoration: none;
+}
+
+.btn-cancel:hover {
+    background: #cdd8e9;
+}
+
+/* FILE UPLOAD */
+input[type="file"] {
+    border: none !important;
+    padding: 8px;
+    background: none;
+}
+
+.preview-icon {
+    margin-top: 5px;
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: none;
+}

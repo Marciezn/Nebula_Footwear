@@ -12,36 +12,35 @@
     </div>
   </section>
 
-  <!-- KATEGORI -->
   <section class="category-section">
   <h2 class="text-center mt-4 mb-3 fw-bold">KATEGORI PRODUK</h2>
-  
+
   <div class="category-wrapper">
     <button class="scroll-btn left">❮</button>
 
-    <div class="category-slider">
-      <!-- 16 item, cuma 8 tampil per geser -->
-      <div class="category-item"><img src="img/smartphone.png"><p>Smartphone</p></div>
-      <div class="category-item"><img src="img/tv.png"><p>Televisi</p></div>
-      <div class="category-item"><img src="img/speaker.png"><p>Speaker</p></div>
-      <div class="category-item"><img src="img/smartwatch.png"><p>Smartwatch</p></div>
-      <div class="category-item"><img src="img/tablet.png"><p>Tablet</p></div>
-      <div class="category-item"><img src="img/mouse.png"><p>Mouse</p></div>
-      <div class="category-item"><img src="img/keyboard.png"><p>Keyboard</p></div>
-      <div class="category-item"><img src="img/monitor.png"><p>Monitor</p></div>
+    <div class="category-slider" id="kategoriSlider">
 
-      <div class="category-item"><img src="img/projector.png"><p>Projector</p></div>
-      <div class="category-item"><img src="img/printer.png"><p>Printer</p></div>
-      <div class="category-item"><img src="img/laptop.png"><p>Laptop</p></div>
-      <div class="category-item"><img src="img/headphone.png"><p>Headphone</p></div>
-      <div class="category-item"><img src="img/camera.png"><p>Kamera</p></div>
-      <div class="category-item"><img src="img/game.png"><p>Game</p></div>
-      <div class="category-item"><img src="img/router.png"><p>Router</p></div>
-      <div class="category-item"><img src="img/vr.png"><p>VR</p></div>
+      @forelse($kategori as $item)
+      <a href="{{ route('user.kategori.detail', $item->id) }}" class="category-item">
+        @if($item->icon_file)
+          <img src="{{ asset('storage/kategori/'.$item->icon_file) }}">
+        @else
+          <div class="placeholder-icon">📦</div>
+        @endif
+        <p>{{ $item->nama }}</p>
+      </a>
+      @empty
+        <p class="text-muted">Belum ada kategori tersedia.</p>
+      @endforelse
+
     </div>
 
     <button class="scroll-btn right">❯</button>
   </div>
+</section>
+
+
+
 <section class="articles">
     <!-- Produk 1 -->
     <div class="product-card">
