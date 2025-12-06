@@ -1,126 +1,117 @@
 <header>
 
-  <!-- Top Info Bar -->
-  <div class="top-bar">
-    <div class="container">
-      <p>
-        Free 3-day delivery and free returns —
-        @guest
-            <a href="{{ route('register') }}">Register</a> or
-            <a href="{{ route('login') }}">Login</a>
-        @endguest
-      </p>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <p>
+                Free 3-day delivery and free returns —
+                @guest
+                    <a href="{{ route('register') }}">Register</a> or <a href="{{ route('login') }}">Login</a>
+                @endguest
+            </p>
 
-      <div class="right-links">
-        @auth
-          <span>Welcome, {{ auth()->user()->name }} 👋</span>
+            <div class="right-links">
+                @auth
+                    <span>Welcome, {{ auth()->user()->name }} 👋</span>
 
-          @if(auth()->user()->role === 'admin')
-            <a href="{{ route('admin.dashboard') }}">Dashboard</a>
-          @else
-            <a href="{{ route('user.dashboard') }}">Dashboard</a>
-          @endif
+                    @if(auth()->user()->role === 'admin')
+                        <a href="{{ route('admin.dashboard') }}">Dashboard</a>
+                    @else
+                        <a href="{{ route('user.dashboard') }}">Dashboard</a>
+                    @endif
 
-          <form action="{{ route('logout') }}" method="POST" style="display:inline;">
-            @csrf
-            <button type="submit" style="background:none;border:none;color:#fff;cursor:pointer;">
-              Logout
-            </button>
-          </form>
-        @endauth
+                    <form action="{{ route('logout') }}" method="POST" class="logout-form">
+                      @csrf
+                      <button type="submit" class="logout-btn">
+                          <i class="fas fa-sign-out-alt"></i>
+                      </button>
+                  </form>
 
-        @guest
-          <a href="{{ route('login') }}">Login</a>
-        @endguest
 
-        <a href="#">INDONESIA</a>
-        <a href="#">IDR Rp</a>
-      </div>
+                @else
+                    <a href="{{ route('login') }}">Login</a>
+                @endauth
+
+                <a href="#">INDONESIA</a>
+            </div>
+        </div>
     </div>
-  </div>
 
 
 
-  <!-- Main Menu -->
-  <div class="main-menu">
-    <div class="container">
+    <!-- MAIN MENU -->
+    <div class="main-menu">
+        <div class="container">
 
-      <div class="logo">
-        <img src="{{ asset('logo.png') }}" alt="Logo">
-        <h1>NEBULA<span>FOOTWEAR</span></h1>
-      </div>
+            <div class="logo">
+                <img src="{{ asset('websepatu/logo13.png') }}" alt="Logo">
+                <h1>NEBULA<span>FOOTWEAR</span></h1>
+            </div>
 
-      <nav class="nav-links">
+            <nav class="nav-links">
+                <a href="{{ url('/') }}">Home</a>
+                <a href="{{ route('user.produk.index') }}">Produk</a>
 
-  <a href="{{ url('/') }}">Home</a>
-  <a href="{{ route('user.produk.index') }}">Produk</a>
+                <!-- Dropdown Category -->
+                <div class="dropdown" id="kategoriDropdown">
+                    <button class="dropdown-toggle">Kategori ⮟</button>
 
-  <div class="dropdown" id="kategoriDropdown">
-    <button class="dropdown-toggle">
-        Kategori ⮟
-    </button>
+                    <div class="dropdown-menu">
+                        @foreach($kategoriNavbar as $k)
+                            <a href="{{ route('user.produk.byKategori', $k->id) }}">{{ $k->nama }}</a>
+                        @endforeach
+                    </div>
+                </div>
 
-    <div class="dropdown-menu">
-        @foreach($kategoriNavbar as $k)
-            <a href="{{ route('user.produk.byKategori', $k->id) }}">
-                {{ $k->nama }}
+                <a href="#">Promo</a>
+                <a href="#">Kontak</a>
+            </nav>
+
+            <!-- CONTACT -->
+            <div class="contact">
+                <p>📞 <strong>(123) 456 888</strong></p>
+                <p><a href="mailto:contact@revoshop.com">contact@revoshop.com</a></p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- SEARCH & CART -->
+    <div class="search-bar">
+        <div class="container search-flex">
+
+            <select>
+                <option>All Departments</option>
+            </select>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search products here...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Cart -->
+            <a href="{{ route('user.cart') }}" class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                @if($cartCount > 0)
+                    <span class="count">{{ $cartCount }}</span>
+                @endif
             </a>
-        @endforeach
+
+        </div>
     </div>
-</div>
 
-
-
-  <a href="#">Promo</a>
-  <a href="#">Kontak</a>
-
-</nav>
-
-
-      <div class="contact">
-        <p>📞 Call Us Now: <span>(123) 456 888</span></p>
-        <p>Email: <a href="mailto:contact@revoshop.com">contact@revoshop.com</a></p>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Search Bar -->
-  <div class="search-bar">
-    <div class="container">
-
-      <select>
-        <option>All Departments</option>
-      </select>
-
-      <div class="search-box">
-        <input type="text" placeholder="Search products here...">
-        <button><i class="fas fa-search"></i></button>
-      </div>
-
-      <div class="icons">
-        <i class="far fa-heart"></i>
-        <i class="fas fa-shopping-cart"></i>
-      </div>
-
-    </div>
-  </div>
 </header>
 
+
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const dropdown = document.getElementById("kategoriDropdown");
-    const toggle = dropdown.querySelector(".dropdown-toggle");
+document.addEventListener("click", function(e){
+    const drop = document.getElementById("kategoriDropdown");
 
-    toggle.addEventListener("click", (e) => {
-        e.stopPropagation();
-        dropdown.classList.toggle("open");
-    });
-
-    // Close if click outside
-    document.addEventListener("click", () => {
-        dropdown.classList.remove("open");
-    });
+    if(drop.contains(e.target)) {
+        drop.classList.toggle("open");
+    } else {
+        drop.classList.remove("open");
+    }
 });
 </script>
-

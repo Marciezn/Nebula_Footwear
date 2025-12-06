@@ -113,8 +113,9 @@ class KategoriController extends Controller
     public function kategoriDetail($id)
     {
         $kategori = Kategori::findOrFail($id);
-        $products = Produk::where('kategori_id', $id)->get();
+        $produk = Produk::where('kategori_id', $id)->where('status','aktif')->get();
 
-        return view('user.kategori.detail', compact('kategori', 'produks'));
+    return view('user.kategori.detail', compact('kategori', 'produk'));
+
     }
 }

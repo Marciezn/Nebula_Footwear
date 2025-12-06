@@ -44,7 +44,10 @@
             </div>
 
             <div class="actions">
-                <button class="btn-cart">🛒 Tambah ke Keranjang</button>
+                <form action="{{ route('user.cart.add', $produk->id) }}" method="POST">
+                    @csrf
+                    <button class="add-cart-btn">🛒 Tambah Keranjang</button>
+                </form>
                 <button class="btn-buy">⚡ Beli Sekarang</button>
                 <button class="btn-wishlist">❤️ Wishlist</button>
             </div>

@@ -7,6 +7,7 @@ use App\Http\Controllers\UserDashboardController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\CartController;
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'loginPage'])->name('login');
@@ -39,6 +40,22 @@ Route::middleware(['auth','role:user'])->prefix('user')->name('user.')->group(fu
     Route::get('/produk/kategori/{id}', [ProdukController::class, 'filterByKategori'])->name('produk.byKategori');
 
 });
+
+Route::middleware(['auth', 'role:user'])->prefix('user')->name('user.')->group(function() {
+
+    Route::get('/cart', [CartController::class, 'index'])->name('cart');
+    Route::post('/cart/add/{id}', [CartController::class, 'add'])->name('cart.add');
+    Route::post('/cart/update/{id}', [CartController::class, 'updateQty'])->name('cart.update');
+    Route::delete('/cart/delete/{id}', [CartController::class, 'destroy'])->name('cart.delete');
+
+});
+
+Route::get('/checkout', [CartController::class, 'checkout'])->name('user.checkout');
+Route::post('/checkout/place', [CartController::class, 'placeOrder'])->name('user.checkout.place');
+Route::get('/order/success/{id}', function($id) {
+    return view('user.order.success', compact('id'));
+})->name('user.order.success');
+
 
 
 Route::get('/', function () {

@@ -43,7 +43,7 @@
     </div>
 
     <div class="right">
-        <img src="{{ asset('gambar1.png') }}" alt="Illustration">
+        <img src="{{ asset('websepatu/gambar1.png') }}" alt="Illustration">
     </div>
 </div>
 

@@ -46,10 +46,6 @@ header {
   text-decoration: none;
 }
 
-.top-bar .right-links a {
-  margin-left: 15px;
-  color: white;
-}
 
 /* --- Main Menu --- */
 .main-menu {
@@ -696,4 +692,37 @@ footer {
     display: block;
 }
 
+/* ================= FIX LOGOUT BUTTON FINAL ================= */
+
+.logout-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-btn {
+    background: var(--red);
+    color: white !important;
+    border: none;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* teks biar ada label */
+.logout-btn::after {
+    content: " Logout";
+    font-weight: 600;
+}
+
+/* hover */
+.logout-btn:hover {
+    background: #b30000;
+    transform: scale(1.05);
+}
 
