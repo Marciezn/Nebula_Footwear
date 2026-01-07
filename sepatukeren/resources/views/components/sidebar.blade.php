@@ -31,15 +31,6 @@
             <i class="fas fa-box"></i> Produk
         </a>
         {{-- Promo --}}
-        <a href="#">
-            <i class="fas fa-tags"></i> Promo
-        </a>
-
-        {{-- Orders --}}
-        <a href="#">
-            <i class="fas fa-shopping-cart"></i> Orders
-        </a>
-
         {{-- Pengaturan --}}
         <a href="#">
             <i class="fas fa-cog"></i> Pengaturan
