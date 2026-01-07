@@ -139,46 +139,106 @@ Menyediakan akses ke Dashboard user dan Logout.
 Informasi Kontak & Layanan
 Menyediakan informasi kontak untuk kepercayaan dan bantuan pelanggan.
 
-
 Keranjang Belanja
 Mengelola produk yang akan dibeli sebelum checkout.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+
+![alt text](https://github.com/Marciezn/Nebula_Footwear/blob/main/sepatukeren/public/gambarproduk.jpeg?raw=true)
+### Produk_user
+
+Fungsi Bagian Produk
+
+Menampilkan Daftar Produk
+Menyajikan seluruh produk yang tersedia lengkap dengan gambar, nama, dan harga.
+
+Filter Produk
+Memudahkan pengguna menyaring produk berdasarkan kategori (misalnya Semua, NIKE).
+
+Identifikasi Produk
+Menampilkan nama produk agar pengguna mengetahui jenis barang yang dijual.
+
+Informasi Harga
+Menunjukkan harga produk secara jelas untuk membantu keputusan pembelian.
+
+Akses ke Detail Produk
+Produk dapat diklik untuk melihat informasi lebih lengkap sebelum membeli.
+
+Mempermudah Proses Pembelian
+Menjadi titik awal pengguna memilih produk sebelum masuk ke keranjang dan checkout.
 
 
-### Premium Partners
+![alt text](https://github.com/Marciezn/Nebula_Footwear/blob/main/sepatukeren/public/gambarcustomer.jpeg?raw=true)
+## Produk_admin
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Fungsi Bagian Customers (Admin)
 
-## Contributing
+Menampilkan Data Pelanggan
+Menyajikan daftar pelanggan yang terdaftar dalam sistem.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Manajemen Data Pelanggan
+Admin dapat mengelola informasi pelanggan melalui tabel data.
 
-## Code of Conduct
+Pencarian Pelanggan
+Memudahkan admin mencari pelanggan berdasarkan nama atau email.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Menambah Pelanggan
+Tombol Add Customer digunakan untuk memasukkan data pelanggan baru.
 
-## Security Vulnerabilities
+Mengubah Data Pelanggan
+Tombol Edit berfungsi untuk memperbarui informasi pelanggan.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Menghapus Data Pelanggan
+Tombol Delete berfungsi menghapus data pelanggan dari sistem.
 
-## License
+Kontrol & Validasi Data
+Membantu admin menjaga data pelanggan tetap rapi, valid, dan terorganisir.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+![alt text](https://github.com/Marciezn/Nebula_Footwear/blob/main/sepatukeren/public/gambarkategori.jpeg?raw=true)
+## kategori_admin
+
+Fungsi Bagian Kategori
+
+Mengelompokkan Produk
+Mengatur produk ke dalam kategori agar lebih terstruktur dan mudah dicari.
+
+Manajemen Data Kategori
+Admin dapat menambah, mengubah, dan menghapus kategori produk.
+
+Pencarian Kategori
+Memudahkan admin mencari kategori tertentu dengan cepat.
+
+Pengaturan Status Kategori
+Menentukan apakah kategori aktif atau tidak aktif untuk ditampilkan ke pengguna.
+
+Identifikasi Visual Kategori
+Ikon kategori membantu membedakan jenis kategori secara visual.
+
+Kontrol Tampilan Produk
+Kategori menentukan produk mana yang muncul di halaman customer.
+
+![alt text](https://github.com/Marciezn/Nebula_Footwear/blob/main/sepatukeren/public/gambarprodukadmin.jpeg?raw=true)
+## Produk_admin
+
+Fungsi Bagian Produk (Admin)
+
+Menampilkan Daftar Produk
+Menyajikan seluruh produk yang tersedia lengkap dengan gambar, nama, kategori, harga, dan stok.
+
+Manajemen Data Produk
+Admin dapat menambah, mengubah, dan menghapus data produk.
+
+Pencarian Produk
+Memudahkan admin mencari produk tertentu dengan cepat.
+
+Pengelompokan Produk
+Mengaitkan produk dengan kategori untuk pengaturan yang terstruktur.
+
+Pengaturan Harga
+Menentukan dan memperbarui harga produk.
+
+Manajemen Stok
+Mengontrol jumlah stok agar ketersediaan produk tetap terpantau.
+
+Kontrol Penjualan
+Memastikan hanya produk yang valid dan tersedia yang dapat dijual ke pelanggan.
